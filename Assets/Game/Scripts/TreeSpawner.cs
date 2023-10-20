@@ -1,25 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GameConstants;
+
 
 public class TreeSpawner : MonoBehaviour
 {
-    GameObject basePlant;
+    public GameObject basePlant;
+    const float interval = (float)FIELD_SPACE / (float)COLUMNS;
+
     // Start is called before the first frame update
     void Start()
     {
-        const float firstPlant = 3;
-        const float lastPlant = 13;
-        float currentIndex = firstPlant;
-        while (currentIndex < lastPlant)
+        float currentIndex = FIELD_START +.5f;
+        while (currentIndex < FIELD_END)
         {
-            //Instantiate();
+            Instantiate(basePlant, new Vector3(currentIndex, BASELINE, ZERO), Quaternion.identity);
+            currentIndex += interval;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
