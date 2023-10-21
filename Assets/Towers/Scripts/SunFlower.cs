@@ -7,7 +7,7 @@ public class SunFlower : MonoBehaviour
     public ResourceCounter resourceCounter;
     public float addSunInterval = 2f;
 
-    void Start()
+    public void Start()
     {
         resourceCounter = GameObject.Find("ResourceCounter").GetComponent<ResourceCounter>();
         InvokeRepeating("AddSun", 1f, addSunInterval);

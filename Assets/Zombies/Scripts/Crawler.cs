@@ -8,7 +8,7 @@ public class Crawler : Zombie
     void Start()
     {
         this.health = 20f;
-        this.speed = 1f;
+        this.speed = .5f;
     }
 
     // Update is called once per frame
