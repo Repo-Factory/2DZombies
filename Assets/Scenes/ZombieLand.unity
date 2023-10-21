@@ -498,6 +498,53 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 954380241214260790, guid: a613031d414e2844fb8aed8adf88f6eb, type: 3}
   m_PrefabInstance: {fileID: 1444650251}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &445091740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445091741}
+  - component: {fileID: 445091742}
+  m_Layer: 0
+  m_Name: ResourceCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &445091741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445091740}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1500884718}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &445091742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445091740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c66506a5a97314b9a71dd5fd585ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sunText: {fileID: 514357567}
+  bloodText: {fileID: 754218324}
+  boneText: {fileID: 798204342}
 --- !u!1 &514357565
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,9 +800,25 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6316092078163746703, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
+      propertyPath: sunCost
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316092078163746703, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
+      propertyPath: boneCost
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316092078163746703, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
+      propertyPath: bloodCost
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6967736401000216954, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
       propertyPath: m_Name
       value: Fire Mushroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967736401000216954, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6967736401000216954, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
       propertyPath: m_TagString
@@ -927,6 +990,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantInstance: {fileID: 744367420}
+  resourceCounter: {fileID: 0}
+  sunCost: 25
+  bloodCost: 50
+  boneCost: 25
   valid_x_points:
   - 0
   - 0
@@ -957,7 +1024,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2120366496743698074, guid: d7441cd982110964bb7b1412f343054f, type: 3}
   firePoint: {fileID: 0}
-  projectile: {fileID: 0}
   isCard: 1
 --- !u!1 &754218322
 GameObject:
@@ -1788,6 +1854,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantInstance: {fileID: 410714371}
+  resourceCounter: {fileID: 0}
+  sunCost: 0
+  bloodCost: 0
+  boneCost: 0
   valid_x_points:
   - 0
   - 0
@@ -1853,6 +1923,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantInstance: {fileID: 1476624018}
+  resourceCounter: {fileID: 0}
+  sunCost: 0
+  bloodCost: 0
+  boneCost: 0
   valid_x_points:
   - 0
   - 0
@@ -1901,7 +1975,7 @@ Transform:
   - {fileID: 1123569920}
   - {fileID: 2141544709}
   - {fileID: 1733355848}
-  - {fileID: 1803881463}
+  - {fileID: 445091741}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1527526244
@@ -2233,37 +2307,6 @@ Transform:
   - {fileID: 215646250}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1803881462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1803881463}
-  m_Layer: 0
-  m_Name: ResourceCounter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1803881463
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803881462}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1500884718}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1857995136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,6 +2490,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantInstance: {fileID: 410714371}
+  resourceCounter: {fileID: 0}
+  sunCost: 0
+  bloodCost: 0
+  boneCost: 0
   valid_x_points:
   - 0
   - 0
@@ -2486,6 +2533,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plantInstance: {fileID: 1889736204}
+  resourceCounter: {fileID: 0}
+  sunCost: 0
+  bloodCost: 0
+  boneCost: 0
   valid_x_points:
   - 0
   - 0

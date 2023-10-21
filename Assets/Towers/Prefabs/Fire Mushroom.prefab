@@ -121,5 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2120366496743698074, guid: d7441cd982110964bb7b1412f343054f, type: 3}
   firePoint: {fileID: 0}
-  projectile: {fileID: 0}
   isCard: 0
+  resourceCounterContainer: {fileID: 7804631757364431166, guid: edb700786107a714ba79ed7fb9d70117, type: 3}
+  resourceCounter: {fileID: 0}

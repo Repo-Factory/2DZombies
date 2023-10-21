@@ -9,6 +9,12 @@ public class Projectile : MonoBehaviour
     public const int ENEMY_LINE = 4;
     public float damage;
     public float speed;
+    public ResourceCounter resourceCounter;
+
+    public void Start()
+    {
+        resourceCounter = GameObject.Find("ResourceCounter").GetComponent<ResourceCounter>();
+    }
 
     void Update()
     {
@@ -38,6 +44,8 @@ public class Projectile : MonoBehaviour
         zombie.health -= damage;
         if (zombie.health <= NO_HEALTH)
         {
+            resourceCounter.addBlood(25);
+            resourceCounter.addBone(25);
             Destroy(enemy);
         }
     }

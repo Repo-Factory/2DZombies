@@ -10,7 +10,6 @@ public class TreeSpawner : MonoBehaviour
     const float interval = (float)FIELD_SPACE / (float)COLUMNS;
     public KeyCode[] keyCodes = { KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.F, KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R };
 
-    // Start is called before the first frame update
     void Start()
     {
         float currentIndex = FIELD_START +.5f;

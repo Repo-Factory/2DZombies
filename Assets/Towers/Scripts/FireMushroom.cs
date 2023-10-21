@@ -6,19 +6,13 @@ public class FireMushroom : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public GameObject projectile;
     public bool isCard = false;
-    public const float shootingInterval = 2f;
-
-    void Start()
+    public const float shootingInterval = 1f;
+    
+    public void Start()
     {
         firePoint = transform;
-        InvokeRepeating("Shoot", 3f, shootingInterval);
-    }
-
-    void Update()
-    {
-        
+        InvokeRepeating("Shoot", 2f, shootingInterval);
     }
 
     public void Shoot()

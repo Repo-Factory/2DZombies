@@ -12,19 +12,30 @@ public class TowerCard : MonoBehaviour
     private GameObject plantDragInstance;
     private GameObject plantCardInstance;
 
+    /// <summary>
+    public ResourceCounter resourceCounter;
+    public int sunCost = 0;
+    public int bloodCost = 0;
+    public int boneCost = 0;
+    /// </summary>
 
+    /// <summary>
+    /// /////////////////////////////
     public const float GRIDLEFT = -5;
     public const float GRIDBOTTOM = -4;
     public const float GRIDRIGHT = 5;
     public const float GRIDTOP = 4;
     public const float GRIDSIZE_X = 10;
     public const float GRIDSIZE_Y = 6;
-
+    /// </summary>
+    
     public float[] valid_x_points = new float[8];
     public float[] valid_y_points = {-2.5f,-1.5f,-0.5f,0.5f,1.5f,2.5f};
 
     public void Start()
     {
+        resourceCounter = GameObject.Find("ResourceCounter").GetComponent<ResourceCounter>();
+
         const float interval = (float)FIELD_SPACE / (float)COLUMNS;
         float currentIndex = FIELD_START + .5f;
         int i = 0;
@@ -59,9 +70,10 @@ public class TowerCard : MonoBehaviour
     {
         if (plantDragInstance != null)
         {
-            if(inGrid(plantDragInstance.transform.position))
+            if(inGrid(plantDragInstance.transform.position) && canAfford())
             {
                 plantDragInstance.transform.position = SnapToNearestGridPosition(plantDragInstance.transform.position);
+                resourceCounter.subtractCost(this.sunCost, this.bloodCost, this.boneCost);
             }
             else
             {
@@ -100,4 +112,10 @@ public class TowerCard : MonoBehaviour
         float y = findClosest(position.y, valid_y_points);
         return new Vector3(x, y, 0);
     }
+
+    public bool canAfford()
+    {
+        return resourceCounter.canAfford(this.sunCost, this.bloodCost, this.boneCost);
+    }
+
 }

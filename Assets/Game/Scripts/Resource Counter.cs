@@ -1,18 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ResourceCounter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TextMeshProUGUI sunText;
+    public TextMeshProUGUI bloodText;
+    public TextMeshProUGUI boneText;
+    private int sun = 50;
+    private int blood = 50;
+    private int bone = 50;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        sunText.text = sun.ToString();
+        bloodText.text = blood.ToString();
+        boneText.text = bone.ToString();
     }
+
+    public void addSun(int sun)
+    {
+        this.sun += sun;
+    }
+    public void addBlood(int blod)
+    {
+        this.blood += blood;
+    }
+    public void addBone(int bone)
+    {
+        this.bone += bone;
+    }
+
+    public void subtractCost(int sun, int blood, int bone)
+    {
+        this.sun -= sun;
+        this.blood -= blood;
+        this.bone -= bone;
+    }
+
+    public bool canAfford(int sun, int blood, int bone)
+    {
+        return this.sun >= sun && this.blood >= blood && this.bone >= bone;
+    }
+
 }
