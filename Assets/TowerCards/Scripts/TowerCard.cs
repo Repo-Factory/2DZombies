@@ -30,7 +30,7 @@ public class TowerCard : MonoBehaviour
     /// </summary>
     
     public float[] valid_x_points = new float[8];
-    public float[] valid_y_points = {-2.5f,-1.5f,-0.5f,0.5f,1.5f,2.5f};
+    public float[] valid_y_points = {-3f,-2.5f,-1.5f,-0.5f,0.5f,1.5f};
 
     public void Start()
     {

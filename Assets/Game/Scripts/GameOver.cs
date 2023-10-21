@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
     private bool isGameOver = false;
     
     // LOSE
-    public int BASELINE = 0;
+    public int BASELINE = -4;
     
     // WIN
     public const int LEVEL_TIME = 120;
@@ -46,7 +46,7 @@ public class GameOver : MonoBehaviour
         {
             Vector3 enemyPosition = enemy.transform.position;
 
-            if (enemyPosition.z < BASELINE)
+            if (enemyPosition.y < -4)
             {
                 loseScreen.DisplayGameOver((int)elapsedTime);
                 break;

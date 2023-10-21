@@ -10,11 +10,6 @@ public class Zombie : MonoBehaviour
     public float damage;
     public float speed;
 
-    void Start()
-    {
-
-    }
-
     protected void Update()
     {
         Vector3 position = new Vector3((float)transform.position.x, (float)transform.position.y, (float)transform.position.z);                  
