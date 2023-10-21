@@ -1855,7 +1855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantInstance: {fileID: 410714371}
   resourceCounter: {fileID: 0}
-  sunCost: 0
+  sunCost: 50
   bloodCost: 0
   boneCost: 0
   valid_x_points:

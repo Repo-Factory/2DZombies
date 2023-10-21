@@ -8,7 +8,7 @@ public class ResourceCounter : MonoBehaviour
     public TextMeshProUGUI sunText;
     public TextMeshProUGUI bloodText;
     public TextMeshProUGUI boneText;
-    private int sun = 50;
+    private int sun = 100;
     private int blood = 50;
     private int bone = 50;
 
@@ -23,7 +23,7 @@ public class ResourceCounter : MonoBehaviour
     {
         this.sun += sun;
     }
-    public void addBlood(int blod)
+    public void addBlood(int blood)
     {
         this.blood += blood;
     }

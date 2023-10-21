@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class SunFlower : MonoBehaviour
 {
-    public GameObject resourceCounterContainer;
     public ResourceCounter resourceCounter;
-    public float addSunInterval = 2;
+    public float addSunInterval = 2f;
 
     void Start()
     {
-        resourceCounter = resourceCounterContainer.GetComponent<ResourceCounter>();
+        resourceCounter = GameObject.Find("ResourceCounter").GetComponent<ResourceCounter>();
+        InvokeRepeating("AddSun", 1f, addSunInterval);
     }
 
-    void Update()
+    public void AddSun()
     {
-        InvokeRepeating("addSun", 2f, addSunInterval);
-    }
-
-    public void addSun()
-    {
-        resourceCounter.addSun(25);
+        resourceCounter.addSun(10);
     }
 }
