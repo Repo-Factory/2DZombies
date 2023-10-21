@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static GameConstants;
-
-
 public class Spawner : MonoBehaviour
 {
     public GameObject chump;
@@ -80,15 +78,16 @@ public class Spawner : MonoBehaviour
 
     void spawnEnemy()
     {
-        int xPos = Random.Range(MIN_GRID, MAX_GRID) * GRID_INTERVAL;
-        int zPos = BORDER_LINE;
-        Instantiate(enemyPrefabMap[determineEnemy()], new Vector3(xPos + 1, BOARD_OBJECT_Y_POS, zPos), Quaternion.identity);
+        float xPos = (Random.Range(0, 8) * FIELD_SPACE/COLUMNS) - 4.5f;
+        float yPos = ENEMYLINE;
+        float zPos = 0;
+        Instantiate(enemyPrefabMap[determineEnemy()], new Vector3(xPos, yPos, zPos), Quaternion.identity);
     }
 
     float GetCurveValue(float t)
     {
         float a = 200000f;  
-        float b = 90f; 
+        float b = 60f; 
         return 1f / (1f + (-a * (t - b)));
     }
 

@@ -10,8 +10,9 @@ public class TimeElapsed : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
-        string formattedTime = FormatTime(elapsedTime);
-        timeText.text = "Time : " + formattedTime;
+        float counterTime = 120 - elapsedTime;
+        string formattedTime = FormatTime(counterTime);
+        timeText.text = "Countdown : " + formattedTime;
     }
 
     string FormatTime(float seconds)

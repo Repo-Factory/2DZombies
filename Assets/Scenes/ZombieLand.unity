@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 111853097}
   - component: {fileID: 111853099}
   - component: {fileID: 111853098}
+  - component: {fileID: 111853100}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -256,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 375, y: -250}
+  m_AnchoredPosition: {x: 360, y: -225}
   m_SizeDelta: {x: 220, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111853098
@@ -279,7 +280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Countdown: 120'
+  m_text: 'Countdown: 02:00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -306,8 +307,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -356,6 +357,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111853096}
   m_CullTransparentMesh: 1
+--- !u!114 &111853100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111853096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5352483b1caddb49b38f7f7b7ad5217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 111853098}
+  elapsedTime: 0
 --- !u!1 &160271348
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 150}
+  m_AnchoredPosition: {x: 390, y: 150}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514357567
@@ -955,7 +970,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 455, y: 150}
+  m_AnchoredPosition: {x: 443, y: 150}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754218324
@@ -1089,7 +1104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 505, y: 150}
+  m_AnchoredPosition: {x: 491, y: 150}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &798204342
@@ -2035,6 +2050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1733355848}
+  - component: {fileID: 1733355849}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -2057,6 +2073,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1500884718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733355849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733355847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe180a51492dc9a4cad5e8ae2cc40234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chump: {fileID: 3002698205160939517, guid: 8fda19dec523d6c42ab87e9eb9d26523, type: 3}
+  kamikaze: {fileID: 9177804165675769588, guid: c8907af3517097b47b09d2377b93fdb5, type: 3}
+  crawler: {fileID: 5849556211378767761, guid: 1efc0a50bcb97bd41a8fc5a43f111510, type: 3}
+  tank: {fileID: 8334888162559613090, guid: 5bc1989c6831247468b075079388286f, type: 3}
+  spawnProbability: 0
+  gameTime: 0
 --- !u!1 &1775488756
 GameObject:
   m_ObjectHideFlags: 0
