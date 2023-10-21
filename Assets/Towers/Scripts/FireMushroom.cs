@@ -2,33 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DefaultTower : MonoBehaviour
+public class FireMushroom : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public KeyCode keyCode;
     public GameObject projectile;
-    public int ammo = 4;
+    public bool isCard = false;
+    public const float shootingInterval = 2f;
 
     void Start()
     {
         firePoint = transform;
+        InvokeRepeating("Shoot", 3f, shootingInterval);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(keyCode))
-        {
-            Shoot();
-        }
+        
     }
 
     public void Shoot()
     {
-        if (projectile == null && ammo > 0)
+        if (!isCard)
         {
-            projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-            ammo--;
+            Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         }
     }
 }

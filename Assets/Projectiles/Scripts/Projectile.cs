@@ -24,7 +24,6 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger!");
         if (collision.gameObject.CompareTag(ENEMY_NAME))
         {
             GameObject zombie = collision.gameObject;

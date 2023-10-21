@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2955343678745842378}
   - component: {fileID: 6381710415810595895}
-  - component: {fileID: -3971743338280045899}
   - component: {fileID: -558883417571159243}
+  - component: {fileID: -3971743338280045899}
+  - component: {fileID: 460092052998760616}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Enemy
@@ -86,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3971743338280045899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8334888162559613090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd1145d1b1299740bf54cefb738add2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 
-  health: 50
-  damage: 0
-  speed: 0.05
 --- !u!70 &-558883417571159243
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,3 +122,35 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.9, y: 3.27}
   m_Direction: 0
+--- !u!114 &-3971743338280045899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334888162559613090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd1145d1b1299740bf54cefb738add2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 
+  health: 50
+  damage: 0
+  speed: 0.05
+--- !u!114 &460092052998760616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334888162559613090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f856e58dbf9363a4984d6c56e0e7d4a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 
+  health: 0
+  damage: 0
+  speed: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7702760011413586857}
   - component: {fileID: 3197177320022453709}
   - component: {fileID: 2700479804409769458}
+  - component: {fileID: 6316092078163746703}
   m_Layer: 0
   m_Name: Fire Mushroom
   m_TagString: Untagged
@@ -106,3 +107,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.52, y: 1.77, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6316092078163746703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967736401000216954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed199ebeae12ba04a98916795fe6494a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 2120366496743698074, guid: d7441cd982110964bb7b1412f343054f, type: 3}
+  firePoint: {fileID: 0}
+  projectile: {fileID: 0}
+  isCard: 0

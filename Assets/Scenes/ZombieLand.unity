@@ -757,6 +757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Mushroom
       objectReference: {fileID: 0}
+    - target: {fileID: 6967736401000216954, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7702760011413586857, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.68
@@ -812,6 +816,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6967736401000216954, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 744367423}
+    - targetCorrespondingSourceObject: {fileID: 6967736401000216954, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 744367426}
   m_SourcePrefab: {fileID: 100100000, guid: e3e74a0359766964c8859032c01b1ec9, type: 3}
 --- !u!4 &546898700 stripped
 Transform:
@@ -936,6 +943,22 @@ MonoBehaviour:
   - 1
   - 2
   - 3
+--- !u!114 &744367426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744367420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed199ebeae12ba04a98916795fe6494a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 2120366496743698074, guid: d7441cd982110964bb7b1412f343054f, type: 3}
+  firePoint: {fileID: 0}
+  projectile: {fileID: 0}
+  isCard: 1
 --- !u!1 &754218322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,7 +2112,7 @@ MonoBehaviour:
   kamikaze: {fileID: 9177804165675769588, guid: c8907af3517097b47b09d2377b93fdb5, type: 3}
   crawler: {fileID: 5849556211378767761, guid: 1efc0a50bcb97bd41a8fc5a43f111510, type: 3}
   tank: {fileID: 8334888162559613090, guid: 5bc1989c6831247468b075079388286f, type: 3}
-  spawnProbability: 0.05
+  spawnProbability: 0.0001
   gameTime: 0
 --- !u!1 &1775488756
 GameObject:
@@ -2609,6 +2632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basePlant: {fileID: 1577069145551776199, guid: d96383a0e4883744dacd966e9b627ca8, type: 3}
+  keyCodes: 6100000073000000640000006600000071000000770000006500000072000000
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
