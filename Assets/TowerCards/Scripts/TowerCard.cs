@@ -3,31 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TowerCard : MonoBehaviour, IDragHandler, IPointerUpHandler
+public class TowerCard : MonoBehaviour
 {
-    public GameObject towerInstance;
-    private GameObject towerDragInstance;
-    private GameObject towerCardInstance;
-    public Canvas canvas;
+    public GameObject plantInstance;
+    private GameObject plantDragInstance;
+    private GameObject plantCardInstance;
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnMouseDrag()
     {
-        if (towerDragInstance != null)
+        if (plantDragInstance != null)
         {
-            towerDragInstance.transform.position = Input.mousePosition;
+            Vector3 mousePosition = Input.mousePosition; mousePosition.z = 0;
+            plantDragInstance.transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
         }
     }
 
     public void OnMouseDown()
     {
-        towerDragInstance = Instantiate(towerInstance, Input.mousePosition, Quaternion.identity);
+        Vector3 mousePosition = Input.mousePosition; mousePosition.z = 0;
+        plantDragInstance = Instantiate(plantInstance, Camera.main.ScreenToWorldPoint(mousePosition), Quaternion.identity);
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    public void OnMouseUp()
     {
-        if (towerDragInstance != null)
+        if (plantDragInstance != null)
         {
-            Destroy(towerDragInstance);
+            //Destroy(plantDragInstance);
         }
     }
 }
