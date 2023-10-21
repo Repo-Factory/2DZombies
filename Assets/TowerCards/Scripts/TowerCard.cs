@@ -13,15 +13,19 @@ public class TowerCard : MonoBehaviour
     {
         if (plantDragInstance != null)
         {
-            Vector3 mousePosition = Input.mousePosition; mousePosition.z = 0;
-            plantDragInstance.transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector3 mousePosition = Input.mousePosition;
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            worldPosition.z = 0;
+            plantDragInstance.transform.position = worldPosition;
         }
     }
 
     public void OnMouseDown()
     {
-        Vector3 mousePosition = Input.mousePosition; mousePosition.z = 0;
-        plantDragInstance = Instantiate(plantInstance, Camera.main.ScreenToWorldPoint(mousePosition), Quaternion.identity);
+        Vector3 mousePosition = Input.mousePosition;
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        worldPosition.z = 0;
+        plantDragInstance = Instantiate(plantInstance, worldPosition, Quaternion.identity);
     }
 
     public void OnMouseUp()
