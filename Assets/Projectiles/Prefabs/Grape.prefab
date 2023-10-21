@@ -127,7 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  speed: 2
+  speed: 3
+  resourceCounter: {fileID: 0}
 --- !u!58 &4037422116518206931
 CircleCollider2D:
   m_ObjectHideFlags: 0

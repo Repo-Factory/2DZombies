@@ -137,7 +137,7 @@ MonoBehaviour:
   type: 
   health: 1
   damage: 0
-  speed: 0.42
+  speed: 0.36
 --- !u!114 &5776376054900659701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
-  health: 1
+  health: 10
   damage: 0
   speed: 0
