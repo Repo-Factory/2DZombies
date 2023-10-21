@@ -86,7 +86,7 @@ public class Spawner : MonoBehaviour
 
     float GetCurveValue(float t)
     {
-        float a = 200000f;  
+        float a = 200000f;  // 2000000
         float b = 60f; 
         return 1f / (1f + (-a * (t - b)));
     }
