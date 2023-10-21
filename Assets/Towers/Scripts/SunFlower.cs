@@ -15,6 +15,6 @@ public class SunFlower : MonoBehaviour
 
     public void AddSun()
     {
-        resourceCounter.addSun(10);
+        resourceCounter.addSun(5);
     }
 }

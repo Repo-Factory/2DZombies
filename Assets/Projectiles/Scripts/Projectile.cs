@@ -44,8 +44,8 @@ public class Projectile : MonoBehaviour
         zombie.health -= damage;
         if (zombie.health <= NO_HEALTH)
         {
-            resourceCounter.addBlood(Random.Range(50, 100));
-            resourceCounter.addBone(Random.Range(50, 100));
+            resourceCounter.addBlood(Random.Range(25, 50));
+            resourceCounter.addBone(Random.Range(25, 50));
             Destroy(enemy);
         }
     }

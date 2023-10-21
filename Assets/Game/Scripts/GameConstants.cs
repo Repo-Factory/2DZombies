@@ -15,7 +15,7 @@ public class GameConstants : MonoBehaviour
     /// </summary>
 
     public const float BASELINE = -4;
-    public const float ENEMYLINE = 3;
+    public const float ENEMYLINE = 5;
     public const float COLUMNS = 8;
     public const float FIELD_SPACE = 10;
     public const float COLUMNS_SPACE = 3;

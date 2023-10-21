@@ -94,7 +94,7 @@ public class TowerCard : MonoBehaviour
 
         foreach (float point in validPoints)
         {
-            float distance = Math.Abs(target - point);
+            float distance = Math.Abs((target - point));
             if (distance < min)
             {
                 min = distance;

@@ -19,7 +19,7 @@ public class Cactus : MonoBehaviour
         {
             GameObject zombie = collision.gameObject;
             Destroy(zombie);
-            resourceCounter.addBlood(Random.Range(25, 50));
+            resourceCounter.addBlood(Random.Range(10, 25));
             resourceCounter.addBone(25);
             Destroy(this.gameObject);
         }
