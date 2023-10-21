@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6454222588692498718}
   - component: {fileID: 7520593484750636268}
   - component: {fileID: 2469591744686613741}
+  - component: {fileID: -3586719176027882376}
   m_Layer: 0
   m_Name: Chump
   m_TagString: Enemy
@@ -101,3 +102,38 @@ MonoBehaviour:
   health: 0
   damage: 0
   speed: 0.05
+--- !u!70 &-3586719176027882376
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3002698205160939517}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.9899999, y: 2.5399997}
+  m_Direction: 0

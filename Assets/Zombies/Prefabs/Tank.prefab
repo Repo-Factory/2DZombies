@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2955343678745842378}
   - component: {fileID: 6381710415810595895}
   - component: {fileID: -3971743338280045899}
+  - component: {fileID: -558883417571159243}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Enemy
@@ -101,3 +102,38 @@ MonoBehaviour:
   health: 50
   damage: 0
   speed: 0.05
+--- !u!70 &-558883417571159243
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334888162559613090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.9, y: 3.27}
+  m_Direction: 0

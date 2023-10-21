@@ -2089,7 +2089,7 @@ MonoBehaviour:
   kamikaze: {fileID: 9177804165675769588, guid: c8907af3517097b47b09d2377b93fdb5, type: 3}
   crawler: {fileID: 5849556211378767761, guid: 1efc0a50bcb97bd41a8fc5a43f111510, type: 3}
   tank: {fileID: 8334888162559613090, guid: 5bc1989c6831247468b075079388286f, type: 3}
-  spawnProbability: 0
+  spawnProbability: 0.05
   gameTime: 0
 --- !u!1 &1775488756
 GameObject:
