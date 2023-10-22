@@ -11,6 +11,7 @@ public class TowerCard : MonoBehaviour
     public GameObject plantInstance;
     private GameObject plantDragInstance;
     private GameObject plantCardInstance;
+    public AudioSource plantAudio;
 
     /// <summary>
     public ResourceCounter resourceCounter;
@@ -74,6 +75,7 @@ public class TowerCard : MonoBehaviour
             {
                 plantDragInstance.transform.position = SnapToNearestGridPosition(plantDragInstance.transform.position);
                 resourceCounter.subtractCost(this.sunCost, this.bloodCost, this.boneCost);
+                plantAudio.Play();
             }
             else
             {
